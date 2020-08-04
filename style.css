@@ -110,11 +110,6 @@ nav ul li a:hover {
   background: transparent;
   color: var(--Cta1);
 }
-
-/* Banner */
-#banner {
-  flex: 1 0 auto; /*SI grow, NO shrink*/
-}
 @media screen and (min-width: 690px) {
   nav {
     display: flex;
@@ -151,3 +146,46 @@ nav ul li a:hover {
   }
 }
 /* End  Header Section */
+/* Banner */
+#banner {
+  flex: 1 0 auto; /*SI grow, NO shrink*/
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./images/banner-img.jpeg) center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-box {
+  color: var(--Light1);
+  text-align: center;
+}
+.banner-title {
+  text-transform: capitalize;
+  font-size: 4rem;
+}
+.banner-underline {
+  border: 3px solid var(--Dark2);
+  width: 200px;
+  margin: 0.75rem auto;
+  background: var(--Dark2);
+  border-radius: 3px;
+}
+.banner-subtitle {
+  margin: 1.5rem 0 2rem 0;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+}
+.banner-box a {
+  display: inline-block;
+  padding: 0.75rem;
+  font-size: 2.25rem;
+  color: var(--Cta1);
+  border: 3px solid var(--Cta1);
+  transition: var(--Transition);
+  background: transparent;
+}
+.banner-box a:hover {
+  background: var(--Light1);
+  color: var(--Dark2);
+  border: 3px solid var(--Dark2);
+}

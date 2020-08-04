@@ -79,17 +79,23 @@ nav ul li a:hover {
   width: 35px;
   margin: 5px 0;
   background: var(--Cta2);
-  transition: var(--Transition);
+  transition: ease-in-out 0.5s;
+  border-radius: 2px;
 }
-/* Formamos una cruz */
+
+/* Para cerrar */
 .turn .bar1 {
-  transform: rotate(-45deg) translate(-7px, 6px);
-}
-.turn .bar2 {
+  transform: translateY(10px);
+  background: var(--Cta1);
   opacity: 0;
 }
+.turn .bar2 {
+  background: var(--Cta1);
+}
 .turn .bar3 {
-  transform: rotate(45deg) translate(-7px, -8px);
+  transform: translateY(-10px);
+  color: var(--Cta1);
+  opacity: 0;
 }
 /* Coding Title */
 .nav-top h3 {
@@ -108,5 +114,40 @@ nav ul li a:hover {
 /* Banner */
 #banner {
   flex: 1 0 auto; /*SI grow, NO shrink*/
+}
+@media screen and (min-width: 690px) {
+  nav {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    padding: 0 1.5rem;
+  }
+  #menu-btn {
+    display: none;
+  }
+  nav ul {
+    flex: 1 1 auto;
+    display: flex !important; /*IMPORTAN PARA MOSTRAR LINKS*/
+    flex-wrap: wrap;
+  }
+  nav ul li {
+    flex: 1 0 125px;
+  }
+  nav ul .icon {
+    flex: 0 0 20px;
+  }
+  nav ul li .link-icon {
+    color: var(--Dark2);
+  }
+  nav ul li .link-icon:hover {
+    color: var(--Light1);
+  }
+
+  nav ul li a {
+    text-align: center;
+  }
+  nav ul li a:hover {
+    padding: 0.75rem !important;
+  }
 }
 /* End  Header Section */

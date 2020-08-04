@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose&family=Roboto:wght@400;700&display=swap');
+/*   Fonts */
+/* font-family: 'Red Rose', cursive; */
+/* font-family: 'Roboto', sans-serif; */
+/*End Fonts*/
+/* Globals */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Colors */
+  --PrimaryColor: #bde4a7;
+  --Dark1: #8bcf63;
+  --Dark2: #589c30;
+  --Light1: #dcf1d0;
+  --Light2: #f3faef;
+  --Cta1: #f55536;
+  --Cta2: #7a9cc6;
+  /* Others */
+  --Transition: all 0.3s ease-in;
+  --FontSecondary: 'Red Rose', cursive;
+  --FontPrimary: 'Roboto', sans-serif;
+}
+body {
+  font-family: var(--FontPrimary);
+  background: var(--Light2);
+}
+a {
+  text-decoration: none;
+}
+/* End Globals */
+
+/* Header Section */
+#header {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* Navbar */
+nav {
+  flex: 0 0 auto; /*NO grow, NO shrink*/
+}
+nav ul {
+  list-style-type: none;
+}
+nav ul li a {
+  display: block; /*queremos que ocupe todo el width*/
+  color: var(--Cta2);
+  background: transparent;
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  transition: var(--Transition);
+  cursor: pointer;
+}
+nav ul li a:hover {
+  color: var(--Cta1);
+  padding-left: 3rem;
+  background: var(--Cta2);
+}
+/* Hacemos la Hamburguer */
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 1rem 0.5rem;
+  align-items: baseline;
+}
+#menu-btn {
+  padding: 5px;
+  border: 2px solid var(--Cta2);
+  cursor: pointer;
+  align-self: center;
+}
+.bar1,
+.bar2,
+.bar3 {
+  height: 5px;
+  width: 35px;
+  margin: 5px 0;
+  background: var(--Cta2);
+  transition: var(--Transition);
+}
+/* Coding Title */
+.nav-top h3 {
+  font-size: 1.5rem;
+  padding: 0.4rem;
+  color: var(--Cta2);
+  border: 3px solid;
+  transition: var(--Transition);
+  cursor: pointer;
+}
+.nav-top h3:hover {
+  background: transparent;
+  color: var(--Cta1);
+}
+
+/* Banner */
+#banner {
+  flex: 1 0 auto; /*SI grow, NO shrink*/
+}
+/* End  Header Section */

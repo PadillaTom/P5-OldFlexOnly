@@ -215,7 +215,7 @@ nav ul li a:hover {
 /* Skills Section */
 
 .skills {
-  background: var(--PrimaryColor);
+  background: var(--Light2);
 }
 .section-container {
   max-width: 90vw;
@@ -265,14 +265,14 @@ nav ul li a:hover {
 /* About Section */
 #about {
   padding: 2rem;
-  background: var(--Dark1);
+  background: var(--Light1);
 }
 .about-text,
 .about-video {
   padding: 2rem;
 }
 .about-text h2 {
-  color: var(--Light2);
+  color: var(--Dark1);
   font-size: 2.5rem;
 }
 .about-text p {
@@ -352,3 +352,99 @@ nav ul li a:hover {
   }
 }
 /* End Services Section */
+
+/* Portfolio Section */
+.portfolio {
+  padding: 2.5rem;
+  background: var(--Light1);
+}
+.work {
+  position: relative; /*Para la card y que el info sea absolute */
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  max-height: 300px;
+  border-radius: 10px;
+  margin: 1rem 0;
+  overflow: hidden; /*Para cuando text aparezca por debajo*/
+}
+.portfolio-img {
+  display: block;
+  width: 100%;
+  min-height: 300px;
+  cursor: pointer;
+  opacity: 1;
+  transition: var(--Transition);
+}
+.portfolio img:hover {
+  opacity: 0.4;
+}
+.img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.25rem;
+  background: var(--PrimaryColor);
+  transition: var(--Transition);
+  margin-bottom: -200px;
+}
+.work:hover .img-overlay {
+  margin-bottom: 0;
+}
+.img-text h3 {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+.img-overlay .fa {
+  font-size: 2rem;
+  color: var(--Cta1);
+  padding: 0.75rem;
+  background: var(--Light2);
+  border-radius: 50%;
+  transition: var(--Transition);
+}
+.img-overlay .fa:hover {
+  transform: translateY(-10px);
+  background: var(--Cta1);
+  color: var(--Cta2);
+}
+.section-btn {
+  text-align: center;
+  margin: 1.75rem 0 0.75rem 0;
+}
+.section-btn a {
+  display: inline-block;
+  padding: 0.5rem;
+  font-size: 2rem;
+  color: var(--Light2);
+  background: var(--Cta2);
+  transition: var(--Transition);
+  font-family: var(--FontPrimary);
+}
+.section-btn a:hover {
+  background: var(--Cta1);
+}
+.section-btn .fa {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+@media screen and (min-width: 576px) {
+  .portfolio-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .work {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+@media screen and (min-width: 992px) {
+  .work {
+    flex: 0 0 calc(33% - 1rem);
+  }
+}
+/* End Portfolio Section */

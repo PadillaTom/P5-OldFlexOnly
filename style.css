@@ -616,6 +616,18 @@ form input {
   border: none;
   border-bottom: 3px solid var(--Cta2);
 }
+form input::-webkit-input-placeholder {
+  color: var(--Dark2);
+}
+form input::-moz-placeholder {
+  color: var(--Dark2);
+}
+form input:-ms-input-placeholder {
+  color: var(--Dark2);
+}
+form input::-ms-input-placeholder {
+  color: var(--Dark2);
+}
 form input::placeholder {
   color: var(--Dark2);
 }

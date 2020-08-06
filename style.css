@@ -547,3 +547,118 @@ nav ul li a:hover {
   }
 }
 /* End Team Section */
+/* Reviews Section  */
+.reviews {
+  padding: 2rem;
+  background: var(--Light2);
+}
+.review {
+  color: var(--Dark2);
+  text-align: center;
+  margin: 2rem 0;
+}
+.review img {
+  /*Creamos el ovalo*/
+  border-radius: 50%;
+  max-width: 200px;
+}
+.review h3 {
+  margin: 0.75rem 0;
+  text-transform: capitalize;
+  color: var(--Dark2);
+}
+.review h5 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--Dark1);
+}
+.review p {
+  line-height: 1.5;
+  width: 75%;
+  margin: 10px auto;
+}
+@media screen and (min-width: 576px) {
+  .reviews-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .review {
+    flex: 0 0 calc(33% - 0.5rem);
+  }
+}
+/* End Reviews Section */
+
+/* Forms Section */
+.contact {
+  padding: 2rem;
+  background: var(--Dark1);
+  color: var(--Light1);
+}
+.contact .title-underline {
+  background: var(--Light1);
+  border: 3px solid var(--Light1);
+}
+.item-info {
+  display: flex;
+  margin: 1.5rem 0;
+  font-size: 1.7rem;
+}
+.item-info .fa {
+  margin-right: 1rem;
+}
+form input {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid var(--Cta2);
+}
+form input::placeholder {
+  color: var(--Dark2);
+}
+#customer-info a {
+  display: block;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  background: var(--Cta1);
+  padding: 1rem;
+  transition: var(--Transition);
+  color: var(--Light1);
+  width: 60%;
+  margin: auto;
+  margin-top: 1rem;
+}
+#customer-info a:hover {
+  background: var(--Light1);
+  color: var(--Cta1);
+}
+
+/* This is responsiveness from FLEXBOX */
+/* @media screen and (min-width: 776px) {
+  .contact-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  #company-info {
+    flex: 0 0 calc(50% - 1rem);
+  }
+  #customer-info {
+    flex: 0 0 calc(50% - 1rem);
+  }
+} */
+
+/* Responsive from GRID */
+@media screen and (min-width: 776px) {
+  .contact-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* End Forms Section  */
